@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="utf-8">
+  <title>Hello World!</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme" content="hugo-coffeehouse">
+  <meta name="theme-color" content="#FFAA00">
+  <meta name="robots" content="noarchive">
+  <meta name="robots" content="noimageindex">
+  <!-- サイトの正式なURLを伝えるmetaタグ -->
+  <meta name="Identifier-URL" content="{{ .Site.BaseURL }}" />
+  {{ .Hugo.Generator }}
+  {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.Author }}<meta name="author" content="{{ . | plainify }}">{{ end }}
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
+
+  {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.0/featherlight.min.css" rel="stylesheet">
+  {{ $unix_time := .Now.Unix }}
+  <link rel="stylesheet" href="/buildin-assets/css/main.css?unix={{ $unix_time }}">
+  {{ range readDir "/static/assets/css" }}
+  <link rel="stylesheet" href="/assets/css{{ .Name | relURL }}?unix={{ $unix_time }}">
+  {{ end }}
+</head>
+<body>
+
+<div class="layout--body">
+  <div class="layout--body-inner">
+    <div class="layout--page-wrapper">
+      <div class="layout--page-inner">
+
+        <section id="body">
+          <div class="padding highlightable">
+            <h1>Customize your own home page</h1>
+            <p>
+              The site is working, change the URL in your browser to get to any custom page. But, don't forget to <a href="https://gohugo.io/themes/customizing/">overwrite this index.html</a> with your own. You typically have 3 choices :
+            </p>
+            <ul>
+              <li><b>1. </b> Create an overview page for your project</li>
+              <li><b>2. </b> Create an empty html page with this code in the head tag to redirect to one of your documentation page : <code>&lt;meta http-equiv="refresh" content="0; url=http://example.com/"/&gt;</code> </li>
+              <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
+            </ul>
+            <p><i class="fa fa-heart fa-4x"></i></p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
