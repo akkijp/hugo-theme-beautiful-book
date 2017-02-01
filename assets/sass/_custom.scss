@@ -3,7 +3,7 @@
 @charset "utf-8";
 
 
-.markdown-body {
+.markdown-section {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
@@ -28,6 +28,7 @@
     margin: 0.67em 0;
   }
   img {
+    max-width: 100%;
     border-style: none;
   }
   svg:not(:root) {
@@ -317,11 +318,6 @@
         background-color: #f8f8f8;
       }
     }
-  }
-  img {
-    max-width: 100%;
-    box-sizing: content-box;
-    background-color: #fff;
   }
   code {
     padding: 0;
