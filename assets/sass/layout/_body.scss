@@ -2,44 +2,6 @@
 
 
 .layout--body{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow-y: auto;
-  color: #000;
-  background: #fff;
-  transition: left 250ms ease;
-}
-
-.layout--body-inner{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow-y: auto;
-}
-
-.layout--book-header{
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  overflow: visible;
-  height: 50px;
-  padding: 0 8px;
-  z-index: 2;
-  font-size: .85em;
-  color: #7e888b;
-  background: 0 0;
-}
-
-
-.layout--page-wrapper{
-  position: relative;
-  outline: 0;
-}
-
-.layout--page-inner{
   position: relative;
   max-width: 800px;
   margin: 0 auto;
