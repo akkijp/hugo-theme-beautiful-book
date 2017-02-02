@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body, html {
+    margin: 0;
     height: 100%;
 }
 .layout--main{
@@ -43,6 +44,7 @@ body, html {
         box-shadow: none;
         outline: 0;
         line-height: 22px;
+        font-size: .9rem;
         padding: 7px 7px;
         color: inherit;
     }
@@ -73,7 +75,7 @@ body, html {
         height: 50px;
         padding: 0 8px;
         z-index: 2;
-        font-size: .85em;
+        font-size: .85rem;
         color: #7e888b;
         background: 0 0;
         .btn{
@@ -87,7 +89,7 @@ body, html {
             -webkit-box-shadow: none!important;
             box-shadow: none!important;
             position: relative;
-            font-size: 14px;
+            font-size: 0.875rem;
         }
         .pull-left {
             float: left;
