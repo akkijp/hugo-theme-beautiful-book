@@ -14,25 +14,35 @@
 
   <div class="layout--main-body">
 
-    <div class="p-page markdown-section">
-      <section id="body">
-        <div class="padding highlightable">
-          <h1>Customize your own home page</h1>
-          <p>
-            The site is working, change the URL in your browser to get to any custom page. But, don't forget to <a href="https://gohugo.io/themes/customizing/">overwrite this index.html</a> with your own. You typically have 3 choices :
-          </p>
-          <ul>
-            <li><b>1. </b> Create an overview page for your project</li>
-            <li><b>2. </b> Create an empty html page with this code in the head tag to redirect to one of your documentation page : <code>&lt;meta http-equiv="refresh" content="0; url=http://example.com/"/&gt;</code> </li>
-            <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-          </ul>
-          <p><i class="fa fa-heart fa-4x"></i></p>
-        </div>
-      </section>
+
+    <div class="p-page">
+
+      <div class="p-page-header">
+        <a class="btn pull-left js-toolbar-action" aria-label="" href="#"><i class="fa fa-align-justify"></i></a>
+      </div>
+      <div class="p-page-content markdown-section">
+        <section id="body">
+          <div class="padding highlightable">
+            <h1>Customize your own home page</h1>
+            <p>
+              The site is working, change the URL in your browser to get to any custom page. But, don't forget to <a href="https://gohugo.io/themes/customizing/">overwrite this index.html</a> with your own. You typically have 3 choices :
+            </p>
+            <ul>
+              <li><b>1. </b> Create an overview page for your project</li>
+              <li><b>2. </b> Create an empty html page with this code in the head tag to redirect to one of your documentation page : <code>&lt;meta http-equiv="refresh" content="0; url=http://example.com/"/&gt;</code> </li>
+              <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
+            </ul>
+            <p><i class="fa fa-heart fa-4x"></i></p>
+          </div>
+        </section>
+      </div>
+
     </div>
 
   </div>
 </div>
+
+{{ partial "foot.html" . }}
 
 </body>
 </html>

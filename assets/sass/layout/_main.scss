@@ -13,16 +13,19 @@ body, html {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     position: absolute;
     top: 0;
-    // left: -300px;
-    left: 0;
+    left: -100%;
     bottom: 0;
     z-index: 1;
     overflow-y: auto;
-    width: 300px;
+    width: calc(100% - 60px);
     color: #364149;
     background: #fafafa;
     border-right: 1px solid rgba(0,0,0,.07);
     transition: left 250ms ease;
+    @media (min-width: 600px){
+      left: -300px;
+      width: 300px;
+    }
 }
 
 #book-search-input {
@@ -55,20 +58,43 @@ body, html {
     overflow-y: auto;
     color: #000;
     background: #fff;
-    transition: left 250ms ease;
-
-    @media (max-width: 1240px){
-        transition: transform 250ms ease;
-        padding-bottom: 20px;
-    }
-    @media (min-width: 600px){
-        left: 300px;
-    }
+    padding-bottom: 20px;
+    transition: left 250ms ease, transform 250ms ease;
 }
 
 .p-page{
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 15px 40px 15px;
+
+    .p-page-header{
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        overflow: visible;
+        height: 50px;
+        padding: 0 8px;
+        z-index: 2;
+        font-size: .85em;
+        color: #7e888b;
+        background: 0 0;
+        .btn{
+            display: block;
+            height: 50px;
+            padding: 0 15px;
+            border-bottom: none;
+            color: #ccc;
+            text-transform: uppercase;
+            line-height: 50px;
+            -webkit-box-shadow: none!important;
+            box-shadow: none!important;
+            position: relative;
+            font-size: 14px;
+        }
+        .pull-left {
+            float: left;
+        }
+    }
+
+    .p-page-content{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 15px 40px 15px;
+    }
 }
