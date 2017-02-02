@@ -1,0 +1,6 @@
+<div class="sc-notices {{ with .Get 0 }}{{ . }}{{ else }}info{{ end }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
+  <div class="sc-notices-title"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>{{ with .Get 0 }}{{ . }}{{ else }}Info{{ end }}</div>
+  <div class="sc-notices-content">
+    {{ .Inner }}
+  </div>
+</div>
