@@ -1,0 +1,34 @@
+
+.p-sidenav{
+    display: block;
+    li ul{
+        padding-left: 20px;
+    }
+    li{
+        margin: 0;
+        list-style: none;
+    }
+    a{
+        display: block;
+        padding: 10px 15px;
+        border-bottom: none;
+        color: #364149;
+        background: 0 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        line-height: 1;
+    }
+    .active a{
+        color: #008cff;
+        background: 0 0;
+        text-decoration: none;
+    }
+    .p-sidenav--list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        transition: top .5s ease;
+    }
+}

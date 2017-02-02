@@ -7,12 +7,15 @@
 </head>
 <body>
 
-<div class="layout--body markdown-section">
+<div class="layout--main">
+  <div class="layout--main-summary">
+    {{ partial "side-nav.html" . }}
+  </div>
 
-    {{ .Content }}
-
+  <div class="layout--main-body">
+    {{ partial "default-content.html" . }}
+  </div>
 </div>
-
 
 </body>
 </html>
