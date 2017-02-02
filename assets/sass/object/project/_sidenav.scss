@@ -22,8 +22,10 @@
     }
     .active a{
         color: #008cff;
-        background: 0 0;
         text-decoration: none;
+    }
+    .active ul a{
+      color: #364149;
     }
     .p-sidenav--list{
         list-style: none;
