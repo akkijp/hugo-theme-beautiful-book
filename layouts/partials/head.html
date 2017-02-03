@@ -1,5 +1,6 @@
 {{ with .URL }}<link rel="canonical" href="{{ . | absLangURL }}" />{{ end }}
 
+{{ partial "head/meta.html" . }}
 <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
 {{ if .Params.noindex }}<meta name="robots" content="noindex">{{ end }}
