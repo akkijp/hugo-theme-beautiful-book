@@ -385,7 +385,7 @@
   <a href="{{ $first.RelPermalink }}">
     <span>
       {{ if isset $first.Params "icon" }}
-        {{ printf $first.Params.icon | safeHTML }}
+        <b>{{ printf $first.Params.icon | safeHTML }}</b>
       {{ end }}
        {{ $first.Title }}
       {{ if $page.Site.Params.showVisitedLinks}}

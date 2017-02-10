@@ -32,5 +32,10 @@
         margin: 0;
         padding: 0;
         transition: top .5s ease;
+        b{
+          display: block;
+          float: left;
+          width: 2em;
+        }
     }
 }
