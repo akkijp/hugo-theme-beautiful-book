@@ -60,7 +60,6 @@ body, html {
     overflow-y: auto;
     color: #000;
     background: #fff;
-    padding-bottom: 20px;
     transition: left 250ms ease, transform 250ms ease;
     @media (min-width: 700px){
       transform: translate(0,0);
