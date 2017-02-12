@@ -72,6 +72,21 @@
 <script src="/buildin-assets/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/css/emojione.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/lib/js/emojione.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".convert-emoji").each(function() {
+    var original = $(this).html();
+    // use .shortnameToImage if only converting shortnames (for slightly better performance)
+    var converted = emojione.toImage(original);
+    $(this).html(converted);
+  });
+});
+</script>
+
+
 {{ $unix_time := .Now.Unix }}
 <link rel="stylesheet" href="/buildin-assets/css/main.css?unix={{ $unix_time }}">
 {{ range readDir "/static/assets/css" }}
